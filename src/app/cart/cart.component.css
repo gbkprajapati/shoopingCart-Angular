@@ -1,0 +1,17 @@
+
+.imageClass{
+
+    position:absolute;
+    color: white;
+    right: -8px;
+    top: -9px;
+    width: 20px;
+    text-align: center;
+    color: while;
+    border-radius:70%;
+    background-color: green;
+}
+
+p{
+    padding: 5px;
+}

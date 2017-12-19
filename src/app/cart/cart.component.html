@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-10">
+  </div>
+  <div class="col-md-2">
+    <div style="float:left;position:relative">
+      <span class="imageClass">{{products.length}} </span>
+      <img src="../../../assets/cart.png" alt="Cart Image" width="50px" height="50px">
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-7">
+    <div *ngFor="let product of products, let i= index" class="card" style="width: 200px;margin-bottom: 10px;float:left;margin-right:10px">
+      <div class="card-body">
+        <h4 class="card-title">{{product.title}}</h4>
+
+        <p class="card-text"> Price :{{product.price |currency:USD:true}}</p>
+        <button class= "btn btn-primary" (click)="removeItem(product)">Remove</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-5">
+    <div style="margin-top:10px;padding-left: 30px">
+      <p style="background-color: orange;border-radius: 10px; "> Total Item Price : {{totalItemPrice |currency:USD:true}} </p>
+      <p style="background-color: green;border-radius: 10px;text-align: center;"> Tax : 9%</p>
+      <p style="background-color: red;border-radius: 10px;">Total Order Price: {{totalPrice |currency:USD:true}}</p>
+    </div>
+  </div>
+</div>

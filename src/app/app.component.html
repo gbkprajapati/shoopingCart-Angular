@@ -3,5 +3,22 @@
   <h1>
     Welcome to {{title}}!
   </h1>
-  
+</div>
+<div class="container">
+
+  <nav class="col-md-6">
+    <button routerLink="/books" routerLinkActive="active" class="btn btn-primary">Books</button> |
+    <button routerLink="/movies" routerLinkActive="active" class="btn btn-primary">Movies</button>
+  </nav>
+
+
+  <div class="row">
+
+    <div class="col-md-6" style="margin-top: 10px">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col-md-6">
+      <app-cart></app-cart>
+    </div>
+  </div>
 </div>
